@@ -2,7 +2,7 @@ class ErrorHandler extends Error {
   constructor(message, statusCode) {
     super(message);
     this.statusCode = statusCode;
-    Error.captureStackTrace(this, this.constructor);
+    Error.captureStackTrace(this, this.constructor); //captureStackTrace V8 function that creates the stack property on an Error instance
   }
 }
 
